@@ -1,3 +1,4 @@
+def imageName = 'HELLOWORLD_GIT'
 node('workers'){
 stage('Checkout'){
 checkout scm}
