@@ -1,5 +1,5 @@
 
-node('linux'){
+node('Linux'){
 stage('Checkout'){
 checkout scm}
 stage('Unit Tests'){
