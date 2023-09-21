@@ -1,5 +1,5 @@
-# HelloWorld_Git
-A git practice
+# HelloCI
+Practicing CI with Jenkins, Git, Docker
 # Best practice:
 #### 'Dev' branch always has the latest. Always sync up with 'dev' branch.
 - Create a branch and work on your branch.
