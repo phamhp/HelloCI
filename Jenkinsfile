@@ -17,7 +17,7 @@ node('MasterNode'){
                     ],
                     submoduleCfg: [],
                     userRemoteConfigs: [
-                        [url: 'ssh://git@github.com:phamhp/HelloCI.git']
+                        [url: 'https://github.com/phamhp/HelloCI.git']
                     ]
                 ]
             } catch (error) {
@@ -35,7 +35,7 @@ node('MasterNode'){
                         ],
                         submoduleCfg: [],
                         userRemoteConfigs: [
-                            [url: 'ssh://git@github.com:phamhp/HelloCI.git']
+                            [url: 'https://github.com/phamhp/HelloCI.git']
                         ]
                     ]
                 }
