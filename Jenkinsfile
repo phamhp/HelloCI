@@ -46,7 +46,7 @@ node('MasterNode'){
         
         }
         stage('Unit Tests'){
-            def imageName = 'helloCI'
+            def imageName = 'hello_ci_unittest'
             def workspace = pwd()
             echo "current workspace ${workspace}"
             sh "docker build -t ${imageName}-test -f Dockerfile.test ."
