@@ -1,7 +1,8 @@
 
-node('Built-In Node'){
+node('MasterNode'){
     try{
-        stage('Checkout'){
+        stage('Source'){
+            echo "========================================================== git checkout =========================================================="
             echo "Checking out ${branch}"
 
             try {
@@ -39,17 +40,17 @@ node('Built-In Node'){
                     ]
                 }
             }
-        
+        echo "========================================================== Execute Jobs =========================================================="
         
         
         
         }
         stage('Unit Tests'){
-        def imageName = 'helloCI'
-        def workspace = pwd()
-        echo "current workspace ${workspace}"
-        sh "docker build -t ${imageName}-test -f Dockerfile.test ."
-        sh "docker run --rm ${imageName}-test"  
+            def imageName = 'helloCI'
+            def workspace = pwd()
+            echo "current workspace ${workspace}"
+            sh "docker build -t ${imageName}-test -f Dockerfile.test ."
+            sh "docker run --rm ${imageName}-test"  
         }
 
 
