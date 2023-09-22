@@ -1,14 +1,6 @@
 import unittest
-
-# import sys
-
-# sys.path.append("/Users/ppham/Documents/PersonalProject/HelloWorld_Git/src")
-
 from dog import Dog
-
-# import sys
-
-# sys.path.insert(0, "/Users/ppham/Documents/PersonalProject/HelloWorld_Git/src")
+import xmlrunner
 
 
 class TestDog(unittest.TestCase):
@@ -22,4 +14,5 @@ class TestDog(unittest.TestCase):
 
 
 if __name__ == "__main__":
+    runner = xmlrunner.XMLTestRunner(output='reports')
     unittest.main()
