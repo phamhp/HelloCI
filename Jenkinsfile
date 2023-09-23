@@ -50,12 +50,12 @@ node('MasterNode'){
             def imageName = 'hello_ci_unittest'
             def workspace = pwd()
             echo "current workspace ${workspace}"
-            //sh "docker build -t ${imageName}-test -f Dockerfile.test ."
-            def imageTest= docker.build("${imageName}-test","-f Dockerfile.test .")
-            imageTest.inside{
+            sh "docker build -t ${imageName}-test -f Dockerfile.test ."
+            //def imageTest= docker.build("${imageName}-test","-f Dockerfile.test .")
+           /* imageTest.inside{
                 sh 'python test_dog.py'
-            }
-            //sh "docker run --rm ${imageName}-test"  
+            }*/
+            sh "docker run --rm ${imageName}-test"  
         }
 
 
